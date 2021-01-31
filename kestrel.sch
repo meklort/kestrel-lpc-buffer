@@ -1,0 +1,418 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "Kestrel Versa-5G Adapter"
+Date "2021-01-30"
+Rev "1.0"
+Comp "Evan Lojewski"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:GND #PWR06
+U 1 1 6088552F
+P 5400 2950
+AR Path="/6088552F" Ref="#PWR06"  Part="1" 
+AR Path="/6040FD5C/6088552F" Ref="#PWR?"  Part="1" 
+F 0 "#PWR06" H 5400 2700 50  0001 C CNN
+F 1 "GND" H 5405 2777 50  0000 C CNN
+F 2 "" H 5400 2950 50  0001 C CNN
+F 3 "" H 5400 2950 50  0001 C CNN
+	1    5400 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 2750 5400 2750
+Wire Wire Line
+	5400 2750 5400 2950
+$Comp
+L power:GND #PWR09
+U 1 1 60885537
+P 6100 3000
+AR Path="/60885537" Ref="#PWR09"  Part="1" 
+AR Path="/6040FD5C/60885537" Ref="#PWR?"  Part="1" 
+F 0 "#PWR09" H 6100 2750 50  0001 C CNN
+F 1 "GND" H 6105 2827 50  0000 C CNN
+F 2 "" H 6100 3000 50  0001 C CNN
+F 3 "" H 6100 3000 50  0001 C CNN
+	1    6100 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 3000 6100 2450
+Wire Wire Line
+	6100 2450 6000 2450
+Wire Wire Line
+	6000 1950 6100 1950
+Wire Wire Line
+	6100 1950 6100 2450
+Connection ~ 6100 2450
+NoConn ~ 6000 2050
+Text Label 3750 2350 2    50   ~ 0
+3v3
+Text Label 3800 2650 2    50   ~ 0
+3v3AUX
+Text HLabel 7200 2250 2    50   BiDi ~ 0
+LPC_AD2
+Text HLabel 7200 2350 2    50   BiDi ~ 0
+LPC_AD1
+Text HLabel 3800 2250 0    50   BiDi ~ 0
+LPC_AD3
+Text HLabel 3800 2150 0    50   Output ~ 0
+~LPC_RESET~
+Text HLabel 3800 2050 0    50   Output ~ 0
+~LPC_FRAME~
+Text HLabel 3800 1950 0    50   Output ~ 0
+LPC_CLK
+Text HLabel 3800 2450 0    50   BiDi ~ 0
+LPC_AD0
+Text HLabel 7200 2750 2    50   Input ~ 0
+~LPC_CLKRUN~
+Text HLabel 7200 2550 2    50   BiDi ~ 0
+LPC_SDA
+Text HLabel 3800 2550 0    50   Input ~ 0
+LPC_SCL
+Text HLabel 7200 2650 2    50   BiDi ~ 0
+~LPC_SERIRQ~
+Text HLabel 7200 2850 2    50   Input ~ 0
+TPM_GPIO0
+Text Notes 5850 1750 0    50   ~ 0
+Connector to Blackbird / Talos II
+$Comp
+L power:+3.3VP #PWR05
+U 1 1 608855A8
+P 5400 1450
+F 0 "#PWR05" H 5550 1400 50  0001 C CNN
+F 1 "+3.3VP" H 5415 1623 50  0000 C CNN
+F 2 "" H 5400 1450 50  0001 C CNN
+F 3 "" H 5400 1450 50  0001 C CNN
+	1    5400 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x10_Odd_Even J1
+U 1 1 608855BC
+P 5700 2350
+AR Path="/608855BC" Ref="J1"  Part="1" 
+AR Path="/6040FD5C/608855BC" Ref="J?"  Part="1" 
+F 0 "J1" H 5750 2967 50  0000 C CNN
+F 1 "PPPC102LFBN-RC" H 5750 2876 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x10_P2.54mm_Vertical" H 5700 2350 50  0001 C CNN
+F 3 "~" H 5700 2350 50  0001 C CNN
+	1    5700 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 2050 5250 2050
+Wire Wire Line
+	3800 2150 5150 2150
+Wire Wire Line
+	3800 2250 5050 2250
+Wire Wire Line
+	3800 2450 4850 2450
+Wire Wire Line
+	6000 2350 6500 2350
+Wire Wire Line
+	6000 2250 6400 2250
+Wire Wire Line
+	6000 2650 6800 2650
+$Comp
+L power:GND #PWR07
+U 1 1 608B128F
+P 5450 5200
+AR Path="/608B128F" Ref="#PWR07"  Part="1" 
+AR Path="/6040FD5C/608B128F" Ref="#PWR?"  Part="1" 
+F 0 "#PWR07" H 5450 4950 50  0001 C CNN
+F 1 "GND" H 5455 5027 50  0000 C CNN
+F 2 "" H 5450 5200 50  0001 C CNN
+F 3 "" H 5450 5200 50  0001 C CNN
+	1    5450 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR010
+U 1 1 608B1296
+P 6150 5250
+AR Path="/608B1296" Ref="#PWR010"  Part="1" 
+AR Path="/6040FD5C/608B1296" Ref="#PWR?"  Part="1" 
+F 0 "#PWR010" H 6150 5000 50  0001 C CNN
+F 1 "GND" H 6155 5077 50  0000 C CNN
+F 2 "" H 6150 5250 50  0001 C CNN
+F 3 "" H 6150 5250 50  0001 C CNN
+	1    6150 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 5250 6150 4700
+Wire Wire Line
+	5550 5000 5450 5000
+Wire Wire Line
+	6150 4700 6050 4700
+$Comp
+L power:+3.3VP #PWR08
+U 1 1 608C5B25
+P 5500 3950
+F 0 "#PWR08" H 5650 3900 50  0001 C CNN
+F 1 "+3.3VP" H 5515 4123 50  0000 C CNN
+F 2 "" H 5500 3950 50  0001 C CNN
+F 3 "" H 5500 3950 50  0001 C CNN
+	1    5500 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 5000 5450 5200
+Wire Wire Line
+	5550 4300 5250 4300
+Wire Wire Line
+	5250 4300 5250 2050
+Connection ~ 5250 2050
+Wire Wire Line
+	5250 2050 5500 2050
+Wire Wire Line
+	5550 4400 5150 4400
+Wire Wire Line
+	5150 4400 5150 2150
+Connection ~ 5150 2150
+Wire Wire Line
+	5150 2150 5500 2150
+Wire Wire Line
+	5050 2250 5050 4500
+Wire Wire Line
+	5050 4500 5550 4500
+Connection ~ 5050 2250
+Wire Wire Line
+	5050 2250 5500 2250
+Wire Wire Line
+	5550 4700 4850 4700
+Wire Wire Line
+	4850 4700 4850 2450
+Connection ~ 4850 2450
+Wire Wire Line
+	4850 2450 5500 2450
+Wire Wire Line
+	5500 2550 4750 2550
+Wire Wire Line
+	5550 4800 4750 4800
+Wire Wire Line
+	4750 4800 4750 2550
+Connection ~ 4750 2550
+Wire Wire Line
+	4750 2550 3800 2550
+Wire Wire Line
+	6050 4200 6150 4200
+Wire Wire Line
+	6150 4200 6150 4700
+Connection ~ 6150 4700
+Wire Wire Line
+	6000 2750 6900 2750
+Wire Wire Line
+	6000 2550 6700 2550
+$Comp
+L power:+3.3V #PWR04
+U 1 1 60910BB0
+P 5200 1450
+F 0 "#PWR04" H 5200 1300 50  0001 C CNN
+F 1 "+3.3V" H 5215 1623 50  0000 C CNN
+F 2 "" H 5200 1450 50  0001 C CNN
+F 3 "" H 5200 1450 50  0001 C CNN
+	1    5200 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 2350 5400 2350
+Wire Wire Line
+	5400 2350 5400 1450
+Wire Wire Line
+	5500 2650 5350 2650
+Wire Wire Line
+	5350 2650 5350 1650
+Wire Wire Line
+	5350 1650 5200 1650
+Wire Wire Line
+	5200 1650 5200 1450
+Wire Wire Line
+	5550 4600 5500 4600
+Wire Wire Line
+	5500 4600 5500 3950
+$Comp
+L power:+3.3V #PWR03
+U 1 1 6091F647
+P 4550 3950
+F 0 "#PWR03" H 4550 3800 50  0001 C CNN
+F 1 "+3.3V" H 4565 4123 50  0000 C CNN
+F 2 "" H 4550 3950 50  0001 C CNN
+F 3 "" H 4550 3950 50  0001 C CNN
+	1    4550 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 4900 4550 4900
+Wire Wire Line
+	4550 4900 4550 3950
+Text HLabel 3800 2850 0    50   Input ~ 0
+~WINDOW_OPEN~
+Wire Wire Line
+	5500 2850 4450 2850
+Wire Wire Line
+	5550 5100 4450 5100
+Wire Wire Line
+	4450 5100 4450 2850
+Connection ~ 4450 2850
+Wire Wire Line
+	4450 2850 3800 2850
+Wire Wire Line
+	2300 4700 1600 4700
+Wire Wire Line
+	1600 1950 5500 1950
+$Comp
+L power:GND #PWR02
+U 1 1 609485FF
+P 3850 5150
+F 0 "#PWR02" H 3850 4900 50  0001 C CNN
+F 1 "GND" H 3855 4977 50  0000 C CNN
+F 2 "" H 3850 5150 50  0001 C CNN
+F 3 "" H 3850 5150 50  0001 C CNN
+	1    3850 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 4700 3700 4700
+Wire Wire Line
+	2300 4400 2150 4400
+Wire Wire Line
+	2150 4400 2150 4100
+Wire Wire Line
+	2150 4100 2300 4100
+Wire Wire Line
+	2150 4100 2150 3700
+Connection ~ 2150 4100
+Wire Wire Line
+	6400 2250 6400 4500
+Wire Wire Line
+	6400 4500 6050 4500
+Connection ~ 6400 2250
+Wire Wire Line
+	6050 4600 6500 4600
+Wire Wire Line
+	6500 4600 6500 2350
+Connection ~ 6500 2350
+Wire Wire Line
+	6050 4800 6700 4800
+Wire Wire Line
+	6700 4800 6700 2550
+Connection ~ 6700 2550
+Wire Wire Line
+	6050 4900 6800 4900
+Wire Wire Line
+	6800 4900 6800 2650
+Connection ~ 6800 2650
+Wire Wire Line
+	6050 5000 6900 5000
+Wire Wire Line
+	6900 5000 6900 2750
+Connection ~ 6900 2750
+Wire Wire Line
+	6000 2850 7000 2850
+Wire Wire Line
+	6900 2750 7200 2750
+Wire Wire Line
+	6800 2650 7200 2650
+Wire Wire Line
+	6700 2550 7200 2550
+Wire Wire Line
+	6500 2350 7200 2350
+Wire Wire Line
+	6400 2250 7200 2250
+Wire Wire Line
+	6050 5100 7000 5100
+Wire Wire Line
+	7000 5100 7000 2850
+Connection ~ 7000 2850
+Wire Wire Line
+	7000 2850 7200 2850
+$Comp
+L Connector_Generic:Conn_02x10_Odd_Even J2
+U 1 1 608993DA
+P 5750 4600
+AR Path="/608993DA" Ref="J2"  Part="1" 
+AR Path="/6040FD5C/608993DA" Ref="J?"  Part="1" 
+F 0 "J2" H 5800 5217 50  0000 C CNN
+F 1 "SBH11-PBPC-D10-ST-BK" H 5800 5126 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x10_P2.54mm_Vertical" H 5750 4600 50  0001 C CNN
+F 3 "~" H 5750 4600 50  0001 C CNN
+	1    5750 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 2150 6300 2150
+Wire Wire Line
+	6300 2150 6300 4400
+Wire Wire Line
+	6300 4400 6050 4400
+Wire Wire Line
+	5550 4200 3700 4200
+$Comp
+L parts:LMK1C1102PWR U1
+U 1 1 608E3B8E
+P 2300 4100
+F 0 "U1" H 3000 4488 60  0000 C CNN
+F 1 "LMK1C1102PWR" H 3000 4382 60  0000 C CNN
+F 2 "parts:LMK1C1102PWR" H 2300 4040 60  0001 C CNN
+F 3 "" H 2300 4100 60  0000 C CNN
+	1    2300 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 4700 1600 1950
+Wire Wire Line
+	3850 4700 3850 5150
+NoConn ~ 3700 4400
+NoConn ~ 3700 4500
+NoConn ~ 3700 4100
+$Comp
+L power:+3.3VP #PWR0101
+U 1 1 60923D99
+P 2150 3700
+F 0 "#PWR0101" H 2300 3650 50  0001 C CNN
+F 1 "+3.3VP" H 2165 3873 50  0000 C CNN
+F 2 "" H 2150 3700 50  0001 C CNN
+F 3 "" H 2150 3700 50  0001 C CNN
+	1    2150 3700
+	1    0    0    -1  
+$EndComp
+Text Notes 7150 4200 0    50   ~ 0
+Connector to Versa Board
+$Comp
+L Device:C C1
+U 1 1 6094435A
+P 1850 4350
+F 0 "C1" H 1965 4396 50  0000 L CNN
+F 1 "100nF" H 1965 4305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 1888 4200 50  0001 C CNN
+F 3 "~" H 1850 4350 50  0001 C CNN
+	1    1850 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 60946CC6
+P 1850 5150
+F 0 "#PWR01" H 1850 4900 50  0001 C CNN
+F 1 "GND" H 1855 4977 50  0000 C CNN
+F 2 "" H 1850 5150 50  0001 C CNN
+F 3 "" H 1850 5150 50  0001 C CNN
+	1    1850 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 5150 1850 4500
+Wire Wire Line
+	1850 4200 1850 4100
+Wire Wire Line
+	1850 4100 2150 4100
+$EndSCHEMATC
